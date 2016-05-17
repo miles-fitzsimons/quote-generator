@@ -1,5 +1,6 @@
 (function() {
   var httpRequest;
+  document.getElementById("generateQuote").onload = function() { makeRequest('https://andruxnet-random-famous-quotes.p.mashape.com/'); };
   document.getElementById("generateQuote").onclick = function() { makeRequest('https://andruxnet-random-famous-quotes.p.mashape.com/'); };
 
   function makeRequest(url) {
@@ -20,12 +21,14 @@
     if (httpRequest.readyState === XMLHttpRequest.DONE) {
       if (httpRequest.status === 200) {
         // alert(httpRequest.responseText);
-        console.log(typeof httpRequest.response);
-        console.log(httpRequest.response.quote);
+        // console.log(typeof httpRequest.response);
+        // console.log(httpRequest.response.quote);
         var obj = JSON.parse(httpRequest.response);
-        console.log(obj);
-        console.log(obj.quote);
-        console.log(obj.author);
+        // console.log(obj);
+        // console.log(obj.quote);
+        // console.log(obj.author);
+        document.getElementById("quoteText").innerHTML = obj.quote;
+        document.getElementById("sourceText").innerHTML = obj.author;
         
       } else {
         alert('There was a problem with the request.');
