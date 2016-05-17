@@ -19,7 +19,14 @@
   function alertContents() {
     if (httpRequest.readyState === XMLHttpRequest.DONE) {
       if (httpRequest.status === 200) {
-        alert(httpRequest.responseText);
+        // alert(httpRequest.responseText);
+        console.log(typeof httpRequest.response);
+        console.log(httpRequest.response.quote);
+        var obj = JSON.parse(httpRequest.response);
+        console.log(obj);
+        console.log(obj.quote);
+        console.log(obj.author);
+        
       } else {
         alert('There was a problem with the request.');
       }
