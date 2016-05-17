@@ -1,6 +1,6 @@
 (function() {
   var httpRequest;
-  document.getElementById("generateQuote").onclick = function() { makeRequest('test.html'); };
+  document.getElementById("generateQuote").onclick = function() { makeRequest('https://andruxnet-random-famous-quotes.p.mashape.com/'); };
 
   function makeRequest(url) {
     httpRequest = new XMLHttpRequest();
@@ -12,6 +12,7 @@
     }
     httpRequest.onreadystatechange = alertContents;
     httpRequest.open('GET', url);
+    httpRequest.setRequestHeader("X-Mashape-Key", "2cJjNPHfNImsh7r7hCWdaCUk3qapp1N8cqzjsn3sjzC5iHvhV0");
     httpRequest.send();
   }
 
@@ -25,3 +26,6 @@
     }
   }
 })();
+
+
+
