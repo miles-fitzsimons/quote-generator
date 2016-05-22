@@ -15,7 +15,7 @@ function updateQuote() {
     if (httpRequest.status === 200) {
       console.log(httpRequest);
       var newQuote = JSON.parse(httpRequest.response);
-      document.getElementById("quoteText").innerHTML = newQuote.quote;
+      document.getElementById("quoteText").innerHTML = "\"" + newQuote.quote + "\"";
       document.getElementById("author").innerHTML = "~ " + newQuote.author;
       updateTweetButtonText("\"" + newQuote.quote + "\"" + " - " + newQuote.author);
     }

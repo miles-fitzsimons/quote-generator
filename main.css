@@ -1,0 +1,46 @@
+* {
+  /* border: solid red 1px; */
+}
+
+body {
+  background-image: url("grunge_city_bg.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#wrapper {
+	position: absolute;
+	width: 90%;
+	padding: 2% 5% 5% 5%;
+  font-family: 'Permanent Marker', cursive;
+}
+
+#buttons {
+	margin-top: 1rem;
+  float: right;
+}
+
+.text {
+	margin-top: 1rem;
+  font-size: 2.5rem;
+  width: 90%;
+  color: #fffeee;
+  text-shadow: 2px 2px 8px #000;
+}
+
+#quoteText {
+  text-align: center;
+  padding: 0 5%;
+}
+
+#author {
+  text-align: center;
+  padding: 0 5%;
+}
+
+button {
+	margin: 0 2rem;
+  box-shadow: 2px 2px 8px #000;;
+}
